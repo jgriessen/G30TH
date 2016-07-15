@@ -1,5 +1,8 @@
 This is a MicroPython board definition file for the G30TH from ghielectronics.
 
+The quick version follows, and a more complete blog post can be found here:
+http://blog.davehylands.com/2016/07/bringing-up-micropython-on-ghi.html
+
 The G30TH is the replacement for the G30HDR. The product page can be found here:
 https://www.ghielectronics.com/catalog/product/551
 
