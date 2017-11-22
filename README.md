@@ -1,6 +1,7 @@
-This is a MicroPython board definition file for the PYFLEX_F401 from kitmatic.com.
+These are MicroPython board definition files for the PYFLEX_F401 from kitmatic.com.  Although cloned from dhylands/G30TH,
+this should never be pulled into dhylands/G30TH -- it is now a different platform.
 
-The quick version follows, and a more complete blog post can be found here:
+The minimal howto follows, and a blog post on using this can be found here:
 http://blog.kitmatic.com/...
 
 The PYFLEX_F401 has the STM32F401CE MCU, voltage converters from USB 5V up to 18VDC and from USB 5Vdown to lithium iron phosphate battery charging volts between 2.4 and 3.4VDC,2 20 pin flat flex connectors to get to the GPIOs, ADCs, and com ports of the MCU, a USB C connector for charging, a microUSB AB connector for development and data logging data transfer, and an SD card slot. 
