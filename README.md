@@ -1,24 +1,19 @@
-This is a MicroPython board definition file for the G30TH from ghielectronics.
+This is a MicroPython board definition file for the PYFLEX_F401 from kitmatic.com.
 
 The quick version follows, and a more complete blog post can be found here:
-http://blog.davehylands.com/2016/07/bringing-up-micropython-on-ghi.html
+http://blog.kitmatic.com/...
 
-The G30TH is the replacement for the G30HDR. The product page can be found here:
-https://www.ghielectronics.com/catalog/product/551
+The PYFLEX_F401 has the STM32F401CE MCU, voltage converters from USB 5V up to 18VDC and from USB 5Vdown to lithium iron phosphate battery charging volts between 2.4 and 3.4VDC,2 20 pin flat flex connectors to get to the GPIOs, ADCs, and com ports of the MCU, a USB C connector for charging, a microUSB AB connector for development and data logging data transfer, and an SD card slot. 
 
 Build the firmware using:
 ```
 cd micropython/stmhal/boards
-git clone https://github.com/dhylands/G30TH.git
+git clone https://github.com/jgriessen/PYFLEX_F401
 cd ..
-make BOARD=G30TH
+make BOARD=PYFLEX_F401
 ```
 
-Note that you need to power the G30TH board by providing 3.3v to the 3V3 pin.
-There is no onboard regulator. The 5V power line from the USB (called VUSB) is
-exposed as V+ and can be used to power an external regulator.
-
-To get the device in DFU mode, you need to connect B0, which is the test
+To get the device in DFU mode, you need to connect ??B0, which is the test
 point located on the bottom right corner of the board (same side and opposite end
 to the USB connector), to 3.3v, while powering up or RESETing the device.
 
@@ -31,18 +26,9 @@ Found DFU: [0483:df11] ver=2200, devnum=14, cfg=1, intf=0, alt=1, name="@Option 
 Found DFU: [0483:df11] ver=2200, devnum=14, cfg=1, intf=0, alt=0, name="@Internal Flash  /0x08000000/04*016Kg,01*064Kg,03*128Kg", serial="377A364D3234"
 ```
 
-The G30TH is read protected. In order to flash MicroPython on it, you need
-to unprotect it, which will in turn erase the part. This is a one-time
-operation. Once MicroPython is flashed, the device will remain unprotected.
-
-Unprotect/Erase the device using:
-```
-dfu-util -s :unprotect:force -a 0 -d 0483:df11 -D build-G30TH/firmware.dfu
-```
-
 Now you can flash MicroPython using:
 ```
-make BOARD=G30TH deploy
+make BOARD=PYFLEX_F401 deploy
 ```
 
 Reboot with BOOT0 unconnected, and it should boot up MicroPython on the REPL:
