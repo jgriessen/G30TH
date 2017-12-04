@@ -49,8 +49,7 @@
 #define MICROPY_HW_SPI2_MISO (pin_B14)
 #define MICROPY_HW_SPI2_MOSI (pin_B15)
 
-// Since the PYFLEX_F401 has an onboard reset, but no user switch and no user LEDs, we route
-// PB10 to J2 for an offboard user switch, (allows the
+// PYFLEX_F401 has onboard reset, BOOT0, and USR switches, ( USR switch allows the
 // filesystem to be reset at boot time).   PB8 drives an LED.
 
 #define MICROPY_HW_LED1             (pin_B8)
