@@ -17,10 +17,10 @@
 #define MICROPY_HW_ENABLE_CAN       (0)
 
 // HSE is 16MHz - F401 does 84 MHz max
-#define MICROPY_HW_CLK_PLLM (?)
-#define MICROPY_HW_CLK_PLLN (???)
-#define MICROPY_HW_CLK_PLLP (RCC_PLLP_DIV8)
-#define MICROPY_HW_CLK_PLLQ (??)
+#define MICROPY_HW_CLK_PLLM (16)
+#define MICROPY_HW_CLK_PLLN (336)
+#define MICROPY_HW_CLK_PLLP (RCC_PLLP_DIV4)
+#define MICROPY_HW_CLK_PLLQ (7)
 
 // UART config
 #define MICROPY_HW_UART1_PORT (GPIOA)
@@ -67,4 +67,4 @@
 // USB config
 #define MICROPY_HW_USB_VBUS_DETECT_PIN (pin_A9)
 #define MICROPY_HW_USB_OTG_ID_PIN      (pin_A10)
-//  Why not have the other USB pins show here to make it a one place to edit pin definitions from MCU package to MCU package?
+//  What would it take to have the other USB pins show here to make it one place to edit?
