@@ -14,9 +14,7 @@ cd ..
 make BOARD=PYFLEX_F401
 ```
 
-To get the device in DFU mode, you need to connect ??B0, which is the test
-point located on the bottom right corner of the board (same side and opposite end
-to the USB connector), to 3.3v, while powering up or RESETing the device.
+To get the device in DFU mode, you need to press S1, (BOOT0 to 3V3), while powering up or resetting the device.
 
 Once in DFU mode, you should be able to use the ```dfu-util --list``` command and see
 something like this:
@@ -46,5 +44,5 @@ can get back into DFU mode by using the command:
 ```
 >>> pyb.bootloader()
 ```
-or by connecting B0 to 3.3v.
+or by connecting B0 to 3V3.
 
