@@ -40,10 +40,10 @@
 //   #define MICROPY_HW_I2C2_SDA (pin_B3) // needed for JTAG
 
 //  SPI busses
-//  #define MICROPY_HW_SPI1_NSS  (pin_A15)
-//  #define MICROPY_HW_SPI1_SCK  (pin_B1)
-//  #define MICROPY_HW_SPI1_MISO (pin_B4)
-//  #define MICROPY_HW_SPI1_MOSI (pin_B5)
+#define MICROPY_HW_SPI1_NSS  (pin_A15)
+#define MICROPY_HW_SPI1_SCK  (pin_B1)
+#define MICROPY_HW_SPI1_MISO (pin_B4)
+#define MICROPY_HW_SPI1_MOSI (pin_B5)
 
 //  #define MICROPY_HW_SPI2_NSS  (pin_B9)
 //  #define MICROPY_HW_SPI2_SCK  (pin_B13)
