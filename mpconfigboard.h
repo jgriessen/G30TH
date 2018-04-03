@@ -1,9 +1,8 @@
 #define MICROPY_HW_BOARD_NAME       "PYFLEX_F401"
 #define MICROPY_HW_MCU_NAME         "STM32F401CE"
-#define MICROPY_PY_SYS_PLATFORM     "pyboard"
 
 
-#define MICROPY_HW_HAS_SWITCH       (1)
+#define MICROPY_HW_HAS_SWITCH       (0)
 #define MICROPY_HW_HAS_FLASH        (1)
 #define MICROPY_HW_HAS_SDCARD       (0)
 #define MICROPY_HW_HAS_MMA7660      (0)
@@ -15,6 +14,8 @@
 #define MICROPY_HW_ENABLE_SERVO     (0)
 #define MICROPY_HW_ENABLE_DAC       (0)
 #define MICROPY_HW_ENABLE_CAN       (0)
+#define MICROPY_HW_ENABLE_SPI1      (0)
+#define MICROPY_HW_ENABLE_SPI2      (0)
 
 // HSE is 16MHz - F401 does 84 MHz max
 #define MICROPY_HW_CLK_PLLM (16)
@@ -44,10 +45,10 @@
 #define MICROPY_HW_SPI1_MISO (pin_B4)
 #define MICROPY_HW_SPI1_MOSI (pin_B5)
 
-#define MICROPY_HW_SPI2_NSS  (pin_B9)
-#define MICROPY_HW_SPI2_SCK  (pin_B13)
-#define MICROPY_HW_SPI2_MISO (pin_B14)
-#define MICROPY_HW_SPI2_MOSI (pin_B15)
+//  #define MICROPY_HW_SPI2_NSS  (pin_B9)
+//  #define MICROPY_HW_SPI2_SCK  (pin_B13)
+//  #define MICROPY_HW_SPI2_MISO (pin_B14)
+//  #define MICROPY_HW_SPI2_MOSI (pin_B15)
 
 // PYFLEX_F401 has onboard reset, BOOT0, and USR switches, ( USR switch allows the
 // filesystem to be reset at boot time).   PB8 drives an LED.
