@@ -24,34 +24,34 @@
 #define MICROPY_HW_CLK_PLLQ (7)
 
 // UART config
-#define MICROPY_HW_UART1_PORT (GPIOA)
-#define MICROPY_HW_UART1_PINS (GPIO_PIN_9 | GPIO_PIN_10)
-
 #define MICROPY_HW_UART2_PORT (GPIOA)
 #define MICROPY_HW_UART2_PINS (GPIO_PIN_2 | GPIO_PIN_3)
 #define MICROPY_HW_UART2_RTS  (GPIO_PIN_1)
 #define MICROPY_HW_UART2_CTS  (GPIO_PIN_0)
 
+#define MICROPY_HW_UART_REPL        PYB_UART_2
+#define MICROPY_HW_UART_REPL_BAUD 57600
+
 // I2C busses
 #define MICROPY_HW_I2C1_SCL (pin_B6)
 #define MICROPY_HW_I2C1_SDA (pin_B7)
 
-#define MICROPY_HW_I2C2_SCL (pin_B4)
-#define MICROPY_HW_I2C2_SDA (pin_B3) // needed for JTAG
+//   #define MICROPY_HW_I2C2_SCL (pin_B4)
+//   #define MICROPY_HW_I2C2_SDA (pin_B3) // needed for JTAG
 
-// SPI busses
-#define MICROPY_HW_SPI1_NSS  (pin_A15)
-#define MICROPY_HW_SPI1_SCK  (pin_B1)
-#define MICROPY_HW_SPI1_MISO (pin_B4)
-#define MICROPY_HW_SPI1_MOSI (pin_B5)
+//  SPI busses
+//  #define MICROPY_HW_SPI1_NSS  (pin_A15)
+//  #define MICROPY_HW_SPI1_SCK  (pin_B1)
+//  #define MICROPY_HW_SPI1_MISO (pin_B4)
+//  #define MICROPY_HW_SPI1_MOSI (pin_B5)
 
 //  #define MICROPY_HW_SPI2_NSS  (pin_B9)
 //  #define MICROPY_HW_SPI2_SCK  (pin_B13)
 //  #define MICROPY_HW_SPI2_MISO (pin_B14)
 //  #define MICROPY_HW_SPI2_MOSI (pin_B15)
 
-// PYFLEX_F401 has onboard reset, BOOT0, and USR switches, ( USR switch allows the
-// filesystem to be reset at boot time).   PB8 drives an LED.
+//  PYFLEX_F401 has onboard reset, BOOT0, and USR switches, ( USR switch allows the
+//  filesystem to be reset at boot time).   PB8 drives an LED.
 
 #define MICROPY_HW_LED1             (pin_B8)
 #define MICROPY_HW_LED_OTYPE        (GPIO_MODE_OUTPUT_PP)
