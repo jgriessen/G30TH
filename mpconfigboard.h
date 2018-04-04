@@ -61,11 +61,10 @@
 #define MICROPY_HW_USRSW_PIN        (pin_B10)
 #define MICROPY_HW_USRSW_PULL       (GPIO_PULLUP)
 #define MICROPY_HW_USRSW_EXTI_MODE  (GPIO_MODE_IT_FALLING)
-#define MICROPY_HW_USRSW_PRESSED    (0)
+#define MICROPY_HW_USRSW_PRESSED    (0)  // active low
 
 // The PYFLEX_F401 has No SDCard -no pins are available in the QFN package.
 
 // USB config
 #define MICROPY_HW_USB_VBUS_DETECT_PIN (pin_A9)
 #define MICROPY_HW_USB_OTG_ID_PIN      (pin_A10)
-//  What would it take to have the other USB pins show here to make it one place to edit?
