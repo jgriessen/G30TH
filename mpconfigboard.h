@@ -1,15 +1,16 @@
 #define MICROPY_HW_BOARD_NAME       "PYFLEX_F401"
 #define MICROPY_HW_MCU_NAME         "STM32F401CE"
 
+#define MICROPY_HW_CLK_LAST_FREQ    (0)
 
-#define MICROPY_HW_HAS_SWITCH       (0)
+#define MICROPY_HW_HAS_SWITCH       (1)
 #define MICROPY_HW_HAS_FLASH        (1)
 #define MICROPY_HW_HAS_SDCARD       (0)
 #define MICROPY_HW_HAS_MMA7660      (0)
 #define MICROPY_HW_HAS_LIS3DSH      (0)
 #define MICROPY_HW_HAS_LCD          (0)
 #define MICROPY_HW_ENABLE_RNG       (0)
-#define MICROPY_HW_ENABLE_RTC       (1)
+#define MICROPY_HW_ENABLE_RTC       (0)
 #define MICROPY_HW_ENABLE_TIMER     (1)
 #define MICROPY_HW_ENABLE_SERVO     (0)
 #define MICROPY_HW_ENABLE_DAC       (0)
@@ -24,13 +25,11 @@
 #define MICROPY_HW_CLK_PLLQ (7)
 
 // UART config
-#define MICROPY_HW_UART2_PORT (GPIOA)
-#define MICROPY_HW_UART2_PINS (GPIO_PIN_2 | GPIO_PIN_3)
-#define MICROPY_HW_UART2_RTS  (GPIO_PIN_1)
-#define MICROPY_HW_UART2_CTS  (GPIO_PIN_0)
-
-#define MICROPY_HW_UART_REPL        PYB_UART_2
-#define MICROPY_HW_UART_REPL_BAUD 57600
+#define MICROPY_HW_UART2_TX (pin_A2)
+#define MICROPY_HW_UART2_RX (pin_A3)
+// UART 6 not avail in F401CE package..
+//   #define MICROPY_HW_UART_REPL PYB_UART_2
+//   #define MICROPY_HW_UART_REPL_BAUD 9600
 
 // I2C busses
 #define MICROPY_HW_I2C1_SCL (pin_B6)
