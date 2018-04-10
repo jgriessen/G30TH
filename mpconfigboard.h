@@ -35,8 +35,8 @@
 #define MICROPY_HW_I2C1_SCL (pin_B6)
 #define MICROPY_HW_I2C1_SDA (pin_B7)
 
- #define MICROPY_HW_I2C2_SCL (pin_B4)
- #define MICROPY_HW_I2C2_SDA (pin_B3) // needed for JTAG
+#define MICROPY_HW_I2C2_SCL (pin_B4)
+#define MICROPY_HW_I2C2_SDA (pin_B3) // needed for JTAG
 
 //  SPI busses
 #define MICROPY_HW_SPI1_NSS  (pin_A15)
