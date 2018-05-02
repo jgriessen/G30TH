@@ -32,9 +32,9 @@ Found DFU: [0483:df11] ver=2200, devnum=14, cfg=1, intf=0, alt=1, name="@Option 
 Found DFU: [0483:df11] ver=2200, devnum=14, cfg=1, intf=0, alt=0, name="@Internal Flash  /0x08000000/04*016Kg,01*064Kg,03*128Kg", serial="377A364D3234"
 ```
 
-Now you can flash MicroPython using:
+Now you can flash MicroPython using the same command again and it will load code to the flash memory:
 ```
-make BOARD=PYFLEX_F401 deploy
+./make_PYFLEX_F401.py
 ```
 
 Reboot with BOOT0 unconnected, (SW23 not pressed), and it should boot up MicroPython on the REPL.  Use a terminal program such as screen, or rshell to connect to /dev/tty ACM0.  The rshell program needs the additional command, 
@@ -49,11 +49,12 @@ MicroPython v1.8.2-13-g08eac74 on 2016-07-14; G30TH with STM32F401CE
 Type "help()" for more information.
 >>> 
 ```
+If the make_PYFLEX_F401.py script fails, study make_PYFLEX_F401_doc.md for ideas what went wrong.
 
 Now that MicroPython is installed and running the REPL, you
 can get into DFU mode, (to load a new micropython), by using the command:
 ```
 >>> pyb.bootloader()
 ```
-or using thw switches as above.  To run programs, you won't need to compile again 
+or using the switches as above.  To run programs, you won't need to compile again 
 until you run into a need for more speed, or use up your code storage space on flash.
