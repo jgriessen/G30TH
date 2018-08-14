@@ -43,12 +43,12 @@
 #define MICROPY_HW_RTC_USE_CALOUT   (1)
 
 // UART config
-#define MICROPY_HW_UART2_TX     (pin_A2)
-#define MICROPY_HW_UART2_RX     (pin_A3)
+//   #define MICROPY_HW_UART2_TX     (pin_A2)
+//   #define MICROPY_HW_UART2_RX     (pin_A3)
 //   #define MICROPY_HW_UART2_RTS    (pin_A1)
 //   #define MICROPY_HW_UART2_CTS    (pin_A0)
-#define MICROPY_HW_UART_REPL        PYB_UART_2
-#define MICROPY_HW_UART_REPL_BAUD   115200
+//   #define MICROPY_HW_UART_REPL        PYB_UART_2
+//   #define MICROPY_HW_UART_REPL_BAUD   115200
 
 // UART 6 not avail in F401CE package..
 //   #define MICROPY_HW_UART1_TX     (pin_A9)
